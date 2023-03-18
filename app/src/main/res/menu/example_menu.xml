@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ebnb_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home"
+        app:ebnb_selectedIconColor="#12CDD9"
+        app:ebnb_selectedTextColor="#12CDD9"
+        app:ebnb_unSelectedIconColor="@color/primary_grey"
+        app:ebnb_unSelectedTextColor="@color/primary_grey" />
+
+    <item
+        android:id="@+id/ebnb_search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/search"
+        app:ebnb_selectedIconColor="@color/primary_blue"
+        app:ebnb_selectedTextColor="@color/primary_blue"
+        app:ebnb_unSelectedIconColor="@color/primary_grey"
+        app:ebnb_unSelectedTextColor="@color/primary_grey" />
+
+    <item
+        android:id="@+id/ebnb_download"
+        android:icon="@drawable/baseline_download_24"
+        android:title="@string/download"
+        app:ebnb_selectedIconColor="@color/primary_blue"
+        app:ebnb_selectedTextColor="@color/primary_blue"
+        app:ebnb_unSelectedIconColor="@color/primary_grey"
+        app:ebnb_unSelectedTextColor="@color/primary_grey" />
+
+    <item
+        android:id="@+id/ebnb_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="@string/profile"
+        app:ebnb_selectedIconColor="@color/primary_blue"
+        app:ebnb_selectedTextColor="@color/primary_blue"
+        app:ebnb_unSelectedIconColor="@color/primary_grey"
+        app:ebnb_unSelectedTextColor="@color/primary_grey" />
+</menu>

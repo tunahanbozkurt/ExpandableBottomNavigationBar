@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ExpandableBottomNavigationBar">
+        <attr name="ebnb_menuResource" format="reference" />
+        <attr name="ebnb_itemBackgroundShape" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableMenuItem">
+        <attr name="android:id" />
+        <attr name="android:title" />
+        <attr name="android:icon" />
+        <attr name="android:contentDescription" />
+        <attr name="ebnb_selectedIconColor" format="color" />
+        <attr name="ebnb_selectedTextColor" format="color" />
+        <attr name="ebnb_unSelectedIconColor" format="color" />
+        <attr name="ebnb_unSelectedTextColor" format="color" />
+    </declare-styleable>
+
+</resources>
