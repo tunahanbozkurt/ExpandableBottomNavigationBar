@@ -12,18 +12,22 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigation =
             findViewById<ExpandableBottomNavigationBar>(R.id.bottom_navigation_view)
 
-        bottomNavigation.setItemSelected(id = R.id.ebnb_home)
         bottomNavigation.setOnItemSelectedListener {
             when (it) {
-                R.id.ebnb_home -> { /*DO STUFF HERE*/
+                R.id.ebnb_home -> {
+                    println("home")
                 }
-                R.id.ebnb_search -> { /*DO STUFF HERE*/
+                R.id.ebnb_search -> {
+                    println("search")
                 }
-                R.id.ebnb_download -> { /*DO STUFF HERE*/
+                R.id.ebnb_download -> {
+                    println("download")
                 }
-                R.id.ebnb_profile -> { /*DO STUFF HERE*/
+                R.id.ebnb_profile -> {
+                    println("profile")
                 }
             }
         }
+        bottomNavigation.setItemSelected(id = R.id.ebnb_home)
     }
 }
