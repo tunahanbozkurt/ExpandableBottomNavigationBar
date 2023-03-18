@@ -166,6 +166,3 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
         const val SELECTED_ITEM_ID = "SELECTED_ITEM_ID"
     }
 }
-
-
-
