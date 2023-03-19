@@ -12,6 +12,10 @@ import androidx.annotation.MenuRes
 import androidx.constraintlayout.helper.widget.Flow
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
+import androidx.navigation.NavController
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavOptions
+import com.example.expandable_bottom_navigation_bar.model.Menu
 import com.example.expandable_bottom_navigation_bar.model.MenuParser
 import com.example.expandable_bottom_navigation_bar.view.MenuItemView
 
@@ -19,6 +23,7 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
 
     private var menuItemBackgroundShape: Int = -1
     private var listener: OnItemSelectedListener? = null
+    private var menu: Menu? = null
 
     constructor(context: Context) : super(context) {
         init(attrs = null)
@@ -57,6 +62,8 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
         removeAllViews()
 
         val menu = MenuParser(context).parse(menuResource)
+        this.menu = menu
+
         val childListener: (View) -> Unit = { view -> setItemSelected(view.id) }
 
         menu.items.forEach { menuItem ->
@@ -73,11 +80,7 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
         }.also(this::addView)
     }
 
-    fun setItemSelected(id: Int, isSelected: Boolean = true) {
-        setItemSelected(id = id, isSelected = isSelected, dispatchAction = true)
-    }
-
-    fun setItemSelected(id: Int, isSelected: Boolean, dispatchAction: Boolean) {
+    private fun setItemSelected(id: Int, isSelected: Boolean = true) {
         val selectedItem = getSelectedItem()
 
         when {
@@ -86,9 +89,7 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
                 getItemById(id)?.let {
                     beginAnimation()
                     it.isSelected = true
-                    if (dispatchAction) {
-                        listener?.onItemSelected(id)
-                    }
+                    listener?.onItemSelected(id)
                 }
             }
             !isSelected -> {
@@ -118,12 +119,12 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
     }
 
 
-    fun setOnItemSelectedListener(listener: OnItemSelectedListener) {
+    private fun setOnItemSelectedListener(listener: OnItemSelectedListener) {
         this.listener = listener
     }
 
 
-    fun setOnItemSelectedListener(block: (Int) -> Unit) {
+    private fun setOnItemSelectedListener(block: (Int) -> Unit) {
         setOnItemSelectedListener(object : OnItemSelectedListener {
             override fun onItemSelected(id: Int) {
                 block(id)
@@ -157,6 +158,27 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
             super.onRestoreInstanceState(superState)
         } else {
             super.onRestoreInstanceState(state)
+        }
+    }
+
+    fun setupWithNavController(
+        navController: NavController
+    ) {
+
+        setOnItemSelectedListener {
+            navController.navigate(it, null, NavOptions.Builder().apply {
+                setLaunchSingleTop(true)
+                setRestoreState(true)
+                setPopUpTo(
+                    navController.graph.findStartDestination().id,
+                    inclusive = false,
+                    saveState = true
+                )
+            }.build())
+        }
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            setItemSelected(destination.id)
         }
     }
 

@@ -2,6 +2,7 @@ package com.example.expandablebottomnavigationbar
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
 import com.example.expandable_bottom_navigation_bar.ExpandableBottomNavigationBar
 
 class MainActivity : AppCompatActivity() {
@@ -12,22 +13,10 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigation =
             findViewById<ExpandableBottomNavigationBar>(R.id.bottom_navigation_view)
 
-        bottomNavigation.setOnItemSelectedListener {
-            when (it) {
-                R.id.ebnb_home -> {
-                    println("home")
-                }
-                R.id.ebnb_search -> {
-                    println("search")
-                }
-                R.id.ebnb_download -> {
-                    println("download")
-                }
-                R.id.ebnb_profile -> {
-                    println("profile")
-                }
-            }
-        }
-        bottomNavigation.setItemSelected(id = R.id.ebnb_home)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        bottomNavigation.setupWithNavController(navController)
     }
 }
