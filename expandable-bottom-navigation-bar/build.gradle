@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+    id 'maven-publish'
 }
 
 android {
@@ -40,5 +41,18 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+}
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.tunahanbozkurt'
+                artifactId = 'expandable-bottom-navigation-bar'
+                version = '1.0'
+            }
+        }
+    }
 }
