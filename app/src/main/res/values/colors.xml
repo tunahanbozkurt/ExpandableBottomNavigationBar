@@ -12,4 +12,7 @@
     <color name="primary_soft">#FF252836</color>
     <color name="primary_blue">#FF12CDD9</color>
     <color name="primary_grey">#FF92929D</color>
+    <color name="primary_orange">#FFFC814A</color>
+    <color name="primary_green">#FF18F2B2</color>
+    <color name="primary_light_purple">#FFB2ABF2</color>
 </resources>
