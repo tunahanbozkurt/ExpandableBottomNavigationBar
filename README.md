@@ -14,4 +14,4 @@ allprojects {
 Add the library to the dependencies:
 
 ```gradle
-implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.0'
+implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.1'
