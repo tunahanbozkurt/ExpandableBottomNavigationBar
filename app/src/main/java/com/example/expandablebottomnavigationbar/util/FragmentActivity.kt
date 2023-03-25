@@ -6,6 +6,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavOptions
 
+/**
+ * Saves the fragment states when the system back button is pressed.
+ */
 fun Fragment.setCustomBackNavigation(navController: NavController) {
     this.requireActivity().onBackPressedDispatcher.addCallback(this,
         object : OnBackPressedCallback(true) {

@@ -5,28 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_light_purple"
-    tools:context=".DownloadFragment">
+    tools:context=".DetailFragment">
 
-    <EditText
-        android:id="@+id/et_download"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:text="@string/detail_fragment"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp24"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="Autofill,LabelFor" />
-
-    <Button
-        android:id="@+id/bt_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp12"
-        android:text="@string/detail"
-        app:layout_constraintEnd_toEndOf="@+id/et_download"
-        app:layout_constraintStart_toStartOf="@+id/et_download"
-        app:layout_constraintTop_toBottomOf="@+id/et_download" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

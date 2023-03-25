@@ -1,6 +1,4 @@
 
-?
-settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 ç
 ]app/src/androidTest/java/com/example/expandablebottomnavigationbar/ExampleInstrumentedTest.kt,2\2\22a5d7ecf17b41c78e16692ce89d9d6bb7d489ef
 û
@@ -19,15 +17,5 @@ iexpandable-bottom-navigation-bar/src/main/java/com/example/expandable_bottom_na
 oexpandable-bottom-navigation-bar/src/main/java/com/example/expandable_bottom_navigation_bar/model/MenuParser.kt,b\a\ba66e0c1feb068779986b31aaac9d4c0e6db05ce
 ù
 mexpandable-bottom-navigation-bar/src/main/java/com/example/expandable_bottom_navigation_bar/model/MenuItem.kt,7\3\73a48928a95d8299d91f82cb82f2507c3c2cd826
-{
-Kapp/src/main/java/com/example/expandablebottomnavigationbar/MainActivity.kt,e\b\ebc0ffa700193b173525135f730f22f42fa448ee
-}
-Mapp/src/main/java/com/example/expandablebottomnavigationbar/SearchFragment.kt,1\b\1b387f054eaa9d99009a007eacff2a1ff4638aa1
-Ñ
-Tapp/src/main/java/com/example/expandablebottomnavigationbar/util/FragmentActivity.kt,3\7\37cd7478ac47e22f9b4de1efe4f34dc27aadfb7a
-{
-Kapp/src/main/java/com/example/expandablebottomnavigationbar/HomeFragment.kt,7\3\7393a6c5face0fadb5c9c9b61f8ad5b494e0e0d8
-~
-Napp/src/main/java/com/example/expandablebottomnavigationbar/ProfileFragment.kt,b\3\b3734d7d8f2604e8e385b9ccbf83cfeec12d0441
-
-Oapp/src/main/java/com/example/expandablebottomnavigationbar/DownloadFragment.kt,e\8\e89b2142b4a511fd613fc00f96622e9a633a4e7d
+?
+settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233

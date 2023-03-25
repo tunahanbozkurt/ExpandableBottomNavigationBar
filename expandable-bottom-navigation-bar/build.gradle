@@ -51,7 +51,7 @@ afterEvaluate {
 
                 groupId = 'com.github.tunahanbozkurt'
                 artifactId = 'expandable-bottom-navigation-bar'
-                version = '1.0'
+                version = '1.1'
             }
         }
     }

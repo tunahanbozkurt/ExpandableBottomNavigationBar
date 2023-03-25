@@ -80,7 +80,7 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
         }.also(this::addView)
     }
 
-    private fun setItemSelected(id: Int, isSelected: Boolean = true) {
+    fun setItemSelected(id: Int, isSelected: Boolean = true, triggerListener: Boolean = true) {
         val selectedItem = getSelectedItem()
 
         when {
@@ -89,7 +89,7 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
                 getItemById(id)?.let {
                     beginAnimation()
                     it.isSelected = true
-                    listener?.onItemSelected(id)
+                    if (triggerListener) listener?.onItemSelected(id)
                 }
             }
             !isSelected -> {
@@ -178,7 +178,22 @@ class ExpandableBottomNavigationBar : ConstraintLayout {
         }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            setItemSelected(destination.id)
+            if (menu?.items?.any { it.id == destination.id } == true) {
+                setItemSelected(destination.id, triggerListener = false)
+            }
+        }
+    }
+
+    fun setupCustomNavigationWithOptions(navController: NavController, options: NavOptions) {
+
+        setOnItemSelectedListener {
+            navController.navigate(it, null, options)
+        }
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (menu?.items?.any { it.id == destination.id } == true) {
+                setItemSelected(destination.id, triggerListener = false)
+            }
         }
     }
 
