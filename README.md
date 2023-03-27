@@ -109,7 +109,7 @@ implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.1'
 ```
 
 ### Source
-Check out for more [chip-navigation-bar](https://material.io/design/components/bottom-navigation.html](https://github.com/ismaeldivita/chip-navigation-bar)) by [ismaeldivita](https://github.com/ismaeldivita)
+Check out for more [chip-navigation-bar](https://github.com/ismaeldivita/chip-navigation-bar)) by [ismaeldivita](https://github.com/ismaeldivita)
 
 ### License
 The MIT License (MIT)
