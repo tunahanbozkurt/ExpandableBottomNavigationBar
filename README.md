@@ -1,37 +1,7 @@
 # ExpandableBottomNavigationBar
 
 
-<img align="right" src="./gif/bottom_nav.gif">
-```xml
-<com.example.expandable_bottom_navigation_bar.ExpandableBottomNavigationBar
-        android:id="@+id/bottom_navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/primary_dark
-        app:ebnb_itemBackgroundShape="@drawable/ebnb_item_background"
-        app:ebnb_menuResource="@menu/example_menu"
-        android:paddingVertical="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-```
-
-### Gradle
-
-Make sure that the repositories section includes Jitpack.
-```gradle
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-Add the library to the dependencies:
-
-```gradle
-implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.1'
-```
+<img align="center" width="350" src="./gif/bottom_nav.gif">
 
 ### Usage
 You can use set the menu items like below.
@@ -91,4 +61,21 @@ You can add the view like below.
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+```
+
+### Gradle
+
+Make sure that the repositories section includes Jitpack.
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Add the library to the dependencies:
+
+```gradle
+implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.1'
 ```
