@@ -62,6 +62,32 @@ You can add the view like below.
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 ```
+Finally, you can setup the navigation in two ways.
+
+First, you can simply use ```setupWithNavController()``` extension. It saves and restores fragment states by default if you need to more control you can use second option.
+```kotlin
+val bottomNavigation = binding.bottomNavigationView
+
+val navHostFragment = supportFragmentManager
+    .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+
+val navController = navHostFragment.navController
+
+bottomNavigation.setupWithNavController(navController)
+```
+
+Second, you can use ```setupCustomNavigationWithOptions()``` extension. You can set custom nav options to achieve the behaviour, you want to create.
+```kotlin
+bottomNavigation.setupCustomNavigationWithOptions(
+            navController,
+            NavOptions
+                .Builder()
+                .apply {
+                    // Your options here
+                }
+                .build()
+        )
+```
 
 ### Gradle
 
@@ -79,3 +105,29 @@ Add the library to the dependencies:
 ```gradle
 implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.1'
 ```
+
+### Source
+Check out for more [chip-navigation-bar](https://material.io/design/components/bottom-navigation.html](https://github.com/ismaeldivita/chip-navigation-bar)) by [ismaeldivita](https://github.com/ismaeldivita)
+
+### License
+The MIT License (MIT)
+
+Copyright (c) 2023 Tunahan Bozkurt
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
