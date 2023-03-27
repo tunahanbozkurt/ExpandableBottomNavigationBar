@@ -4,7 +4,7 @@
 <img align="center" width="350" src="./gif/bottom_nav.gif">
 
 ### Usage
-You can use set the menu items like below.
+You can set the menu items like below.
 ```xml
 <!-- example_menu.xml -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
