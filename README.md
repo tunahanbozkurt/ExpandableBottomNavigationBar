@@ -1,5 +1,7 @@
 # ExpandableBottomNavigationBar
 
+<img align="center" width="350" src="./gif/bottom_nav.gif">
+
 ### Gradle
 
 Make sure that the repositories section includes Jitpack.
