@@ -102,6 +102,8 @@ allprojects {
 ```
 Add the library to the dependencies:
 
+[![](https://jitpack.io/v/tunahanbozkurt/ExpandableBottomNavigationBar.svg)](https://jitpack.io/#tunahanbozkurt/ExpandableBottomNavigationBar)
+
 ```gradle
 implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.1'
 ```
