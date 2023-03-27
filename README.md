@@ -17,8 +17,6 @@ Add the library to the dependencies:
 implementation 'com.github.tunahanbozkurt:ExpandableBottomNavigationBar:1.1'
 ```
 
-### Usage
-
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
